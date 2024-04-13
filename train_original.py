@@ -68,10 +68,10 @@ torch.cuda.empty_cache()
 # 데이터셋 등록
 
 dataset_name = "coco_panoptic_seg_train"
-image_root = "/home/coraldl/meta/Mask2Former/datasets/indoor4/train_RGB"
-panoptic_json = "/home/coraldl/meta/Mask2Former/datasets/indoor4/annotations/panoptic_train_coral.json"
-instances_json = "/home/coraldl/meta/Mask2Former/datasets/indoor4/annotations/instance_train.json"
-panoptic_root = "/home/coraldl/meta/Mask2Former/datasets/indoor4/panoptic_train_coral"
+image_root = "/home/coraldl/meta/Mask2Former/datasets/Coral_Indoor_Datasets/IndoorSteroDataset_finetune4/indoor4/train_RGB"
+panoptic_json = "/home/coraldl/meta/Mask2Former/datasets/Coral_Indoor_Datasets/IndoorSteroDataset_finetune4/indoor4/annotations/panoptic_train_coral.json"
+instances_json = "/home/coraldl/meta/Mask2Former/datasets/Coral_Indoor_Datasets/IndoorSteroDataset_finetune4/indoor4/annotations/instance_train.json"
+panoptic_root = "/home/coraldl/meta/Mask2Former/datasets/Coral_Indoor_Datasets/IndoorSteroDataset_finetune4/indoor4/annotations/panoptic_train_coral"
 
 register_coco_panoptic(
     name = dataset_name,
@@ -90,11 +90,11 @@ register_coco_panoptic(
    
     "stuff_dataset_id_to_contiguous_id": {92: 80, 93: 81, 95: 82, 100: 83, 107: 84, 109: 85, 112: 86, 118: 87, 119: 88, 122: 89, 125: 90, 128: 91, 130: 92, 133: 93, 138: 94, 141: 95, 144: 96, 145: 97, 147: 98, 148: 99, 149: 100, 151: 101, 154: 102, 155: 103, 156: 104, 159: 105, 161: 106, 166: 107, 168: 108, 171: 109, 175: 110, 176: 111, 177: 112, 178: 113, 180: 114, 181: 115, 184: 116, 185: 117, 186: 118, 187: 119, 188: 120, 189: 121, 190: 122, 191: 123, 192: 124, 193: 125, 194: 126, 195: 127, 196: 128, 197: 129, 198: 130, 199: 131, 200: 132},
     },
-    image_root = "/home/coraldl/meta/Mask2Former/datasets/indoor/val_RGB",
-    panoptic_root = "/home/coraldl/meta/Mask2Former/datasets/indoor/panoptic_val_coral",
-    panoptic_json = "/home/coraldl/meta/Mask2Former/datasets/indoor/annotations/panoptic_val_coral.json",
+    image_root = "/home/coraldl/meta/Mask2Former/datasets/Coral_Indoor_Datasets/IndoorSteroDataset_finetune4/indoor4/val_RGB",
+    panoptic_root = "/home/coraldl/meta/Mask2Former/datasets/Coral_Indoor_Datasets/IndoorSteroDataset_finetune4/indoor4/annotations/panoptic_val_coral",
+    panoptic_json = "/home/coraldl/meta/Mask2Former/datasets/Coral_Indoor_Datasets/IndoorSteroDataset_finetune4/indoor4/annotations/panoptic_val_coral.json",
     #sem_seg_root = "/home/coraldl/meta/Mask2Former/datasets/coco/panoptic_semseg_train",
-    instances_json = "/home/coraldl/meta/Mask2Former/datasets/indoor/annotations/instance_val.json"
+    instances_json = "/home/coraldl/meta/Mask2Former/datasets/Coral_Indoor_Datasets/IndoorSteroDataset_finetune4/indoor4/annotations/instance_val.json"
 )
 
 
