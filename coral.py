@@ -25,8 +25,9 @@ def process_images_in_directory(input_directory, output_directory):
     cfg = get_cfg()
     add_deeplab_config(cfg)
     add_maskformer2_config(cfg)
-    cfg.merge_from_file("/home/coraldl/meta/Mask2Former/configs/coco/panoptic-segmentation/swin/maskformer2_swin_large_IN21k_384_bs16_100ep_1.yaml")
-    cfg.MODEL.WEIGHTS = "/home/coraldl/meta/Mask2Former/model_LR_5_0019999.pth"
+    merge_from_filename = os.path.join(prefix, "configs/coco/panoptic-segmentation/swin/maskformer2_swin_large_IN21k_384_bs16_100ep_1.yaml")
+    cfg.merge_from_file(merge_from_filename)
+    cfg.MODEL.WEIGHTS = os.path.join(prefix, "model_LR_5_0019999.pth")
     cfg.MODEL.MASK_FORMER.TEST.SEMANTIC_ON = True
     cfg.MODEL.MASK_FORMER.TEST.INSTANCE_ON = True
     cfg.MODEL.MASK_FORMER.TEST.PANOPTIC_ON = True
@@ -61,7 +62,8 @@ def process_images_in_directory(input_directory, output_directory):
         print(f"Processed and saved: {image_path} -> {result_image_path}")
 
 # Example usage
-input_directory = "/home/coraldl/meta/Mask2Former/datasets/Coral_Indoor_Datasets/ALL_Image_webcam"
-output_directory = "/home/coraldl/meta/Mask2Former/datasets/outputs"
+prefix = os.getcwd()
+input_directory = os.path.join(prefix, "datasets/Coral_Indoor_Datasets/ALL_Image_webcam")
+output_directory = os.path.join(prefix, "datasets/outputs")
 process_images_in_directory(input_directory, output_directory)
 
