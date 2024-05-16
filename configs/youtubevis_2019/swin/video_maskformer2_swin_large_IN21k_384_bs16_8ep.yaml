@@ -11,10 +11,12 @@ MODEL:
     DROP_PATH_RATE: 0.3
     PATCH_NORM: True
     PRETRAIN_IMG_SIZE: 384
-  WEIGHTS: "/home/coraldl/meta/Mask2Former/model_final_c5c739.pkl"
+  WEIGHTS: "model_final_c5c739.pkl"
   PIXEL_MEAN: [123.675, 116.280, 103.530]
   PIXEL_STD: [58.395, 57.120, 57.375]
   MASK_FORMER:
     NUM_OBJECT_QUERIES: 200
+SOLVER:
+  IMS_PER_BATCH: 2
 INPUT:
   MIN_SIZE_TEST: 480
