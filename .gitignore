@@ -5,6 +5,7 @@ inference_test_output
 
 
 *.txt
+*.log
 *.png
 *.json
 *.diff
